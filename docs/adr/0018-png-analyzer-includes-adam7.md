@@ -1,0 +1,3 @@
+# Finish the PNG analyzer, including Adam7, before other formats
+
+Other formats, Matches, and the GUI stay out of this implementation phase. The PNG analyzer is in-scope for both interlace method 0 and Adam7 (method 1): chunk-stream validation and CRCs, concatenated IDAT decompress within policy limits, scanline/filter-byte checks for both layouts, Adam7’s seven passes (dimensions, per-pass scanlines, filters), and expected decompressed size (no silent extra or missing image data). Do not assume a non-interlaced scanline layout. Host resource exhaustion remains in scope. Trailing-byte/polyglot hunts remain optional later, not a substitute for Adam7.

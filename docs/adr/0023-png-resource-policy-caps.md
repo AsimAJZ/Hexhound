@@ -1,0 +1,3 @@
+# PNG resource caps are HexHound policy
+
+HexHound policy (not PNG spec): 16 MiB per IDAT chunk; 64 MiB total concatenated compressed IDAT; 64 MiB decompressed IDAT; 16 MiB maximum unfilter scanline (row buffer). Unfilter uses only current/previous row buffers, not a full bitmap. Hitting a cap is a resource-policy Indicator and Incomplete analysis. These numbers must not be raised in implementation without asking first, with a concrete reason.

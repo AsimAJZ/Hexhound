@@ -1,0 +1,3 @@
+# PNG slice validates the chunk stream, not metadata payloads
+
+The PNG analyzer checks signature, IHDR first, IEND last, consecutive IDATs, CRC on every chunk read, PLTE presence/absence/order vs color type, and ordering among chunks it interprets. Unknown critical chunks are a specification Indicator and stop the analyzer before IDAT inflation when image data cannot be interpreted safely. Unknown or unimplemented ancillary chunks are CRC-checked and skipped, not parsed. Text, compressed text, ICC, EXIF, and other metadata payload parsers are out of this slice. A structurally valid PNG is not a safety claim.

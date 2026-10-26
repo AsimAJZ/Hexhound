@@ -1,0 +1,3 @@
+# Hypotheses come from extension and HexHound magic bytes only
+
+Identification must not use standard-library MIME sniffing or OS file-type databases. Those are not designed as untrusted-input boundaries. Hypotheses come from the extension and HexHound’s own magic-byte table. Only bytes actually read from the file are file evidence (no padding unread buffer tail as content). Cheap conflicts (extension vs magic, multiple magics) may be Indicators; unknown extension or unrecognized magic alone is not suspicious. Hypotheses remain metadata, not findings.

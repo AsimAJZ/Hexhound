@@ -1,0 +1,3 @@
+# Risk ratings are Low, Medium, High, Critical — never Clean
+
+Ratings summarize findings only. No findings yields Low, with Analysis status and in-scope-methods copy so emptiness is not read as clean. Incomplete is shown separately and does not automatically increase the rating. The mapping from individual Indicators/Matches to levels is deferred. The words Clean, Safe, and Clear must not be used as a rating or as a substitute for an empty finding list.

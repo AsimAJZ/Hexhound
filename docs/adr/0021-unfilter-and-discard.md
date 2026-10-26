@@ -1,0 +1,3 @@
+# Unfilter PNG rows to validate, then discard pixels
+
+Non-interlaced and Adam7 layouts are both in scope. HexHound validates expected decompressed size and filter bytes 0–4 for every scanline in every pass, then reverses filters using only bounded current/previous row buffers. Reconstructed pixels are not kept or returned. Resource-policy limits that stop this work yield a policy Indicator and Incomplete status. One hostile PNG must not abort the scan.
